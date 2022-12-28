@@ -1,0 +1,172 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-color: #34495e;
+  text-align: center;
+  color: white;
+  font-family: 'Roboto', sans-serif;
+  position: relative;
+}
+
+.wrong {
+  position: absolute;
+  right: 10%;
+  top: 40%;
+}
+
+header h1 {
+  padding: 1.5rem 0;
+}
+
+#game {
+  padding-top: 8rem;
+  margin: auto;
+  width: fit-content;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+}
+
+.hangman {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: absolute;
+  top: 5rem;
+}
+
+.hangman div {
+  background-color: white;
+}
+
+.upper {
+  width: 5rem;
+  height: .2rem;
+  position: relative;
+}
+
+.upper::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  background-color: white;
+  width: .2rem;
+  height: 2.5rem;
+  border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.vertical {
+  margin-right: 4.8rem;
+  height: 12em;
+  width: .2rem;
+}
+
+.bottom {
+  width: 5rem;
+  height: .2rem;
+  border-radius: 10px;
+  margin-right: 4.8rem;
+}
+
+.hangman-guy {
+  position: absolute;
+  top: 7rem;
+  left: 1.2rem;
+}
+
+.body-part {
+  width: .2rem;
+  background-color: white;
+}
+
+.head {
+  position: relative;
+  height: 2.5rem;
+  width: 2.5rem;
+  border-radius: 50%;
+}
+
+.head::after {
+  content: '';
+  width: 2rem;
+  height: 2rem;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  background-color: #34495e;
+  border-radius: 50%;
+}
+
+.body {
+  height: 4rem;
+  margin-left: 1.1rem;
+}
+
+.hand {
+  height: 2rem;
+  top: 2.5rem;
+  position: absolute;
+}
+
+.left-hand {
+  left: .4rem;
+  rotate: -50deg;
+}
+
+.right-hand {
+  right: .4rem;
+  rotate: 50deg;
+}
+
+.leg {
+  height: 3rem;
+  bottom: -2.8rem;
+  position: absolute;
+}
+
+.left-leg {
+  rotate: 25deg;
+  left: .4rem;
+}
+
+.right-leg {
+  rotate: -25deg;
+  right: .5rem;
+}
+
+.hidden {
+  display: none;
+}
+
+.word {
+  position: absolute;
+  top: 25rem;
+  display: flex;
+  gap: .8rem;
+}
+
+
+.letter {
+  position: relative;
+  width: 1.5rem;
+  height: .25rem;
+  background-color: #2c80b9;
+}
+
+.letter::after {
+  content: attr(data-letter);
+  position: absolute;
+  left: 50%;
+  top: -1rem;
+  font-size: 1.5rem;
+  transform: translate(-50%, -50%);
+}
